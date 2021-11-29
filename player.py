@@ -13,7 +13,10 @@ class Player:
         self.opposite_diagonal_container = [0 for _ in range(Constants.N)]
 
     def check_win(self):
-        if (Constants.N in self.rows_container or Constants.N in self.columns_container or self.check_diagonal() or self.check_opposite_diagonal()):
+        if (Constants.N in self.rows_container or
+            Constants.N in self.columns_container or
+            self.check_diagonal() or
+                self.check_opposite_diagonal()):
             return True
 
         return False
